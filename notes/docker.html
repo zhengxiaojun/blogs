@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker 部署服务🔥 | Jack Zheng的博客</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="资深码农，专注平台工具开发">
+    
+    <link rel="preload" href="/blogs/assets/css/0.styles.1189137d.css" as="style"><link rel="preload" href="/blogs/assets/js/app.a87bd0ee.js" as="script"><link rel="preload" href="/blogs/assets/js/7.ebdb849f.js" as="script"><link rel="preload" href="/blogs/assets/js/2.cd33bdb9.js" as="script"><link rel="preload" href="/blogs/assets/js/1.5c5de54b.js" as="script"><link rel="preload" href="/blogs/assets/js/41.99902ed7.js" as="script"><link rel="prefetch" href="/blogs/assets/js/10.d3726253.js"><link rel="prefetch" href="/blogs/assets/js/11.83dcbbc8.js"><link rel="prefetch" href="/blogs/assets/js/14.159372c7.js"><link rel="prefetch" href="/blogs/assets/js/15.53daba4f.js"><link rel="prefetch" href="/blogs/assets/js/16.a7ead973.js"><link rel="prefetch" href="/blogs/assets/js/17.11536d6a.js"><link rel="prefetch" href="/blogs/assets/js/18.bf4ddf76.js"><link rel="prefetch" href="/blogs/assets/js/19.dd24f890.js"><link rel="prefetch" href="/blogs/assets/js/20.fd8156bf.js"><link rel="prefetch" href="/blogs/assets/js/21.c06c66f0.js"><link rel="prefetch" href="/blogs/assets/js/22.741cb199.js"><link rel="prefetch" href="/blogs/assets/js/23.c33379bd.js"><link rel="prefetch" href="/blogs/assets/js/24.cb7781fd.js"><link rel="prefetch" href="/blogs/assets/js/25.95e84b36.js"><link rel="prefetch" href="/blogs/assets/js/26.097df3f1.js"><link rel="prefetch" href="/blogs/assets/js/27.9d6d8556.js"><link rel="prefetch" href="/blogs/assets/js/28.541c89d1.js"><link rel="prefetch" href="/blogs/assets/js/29.60b8eefd.js"><link rel="prefetch" href="/blogs/assets/js/3.bd1e7f78.js"><link rel="prefetch" href="/blogs/assets/js/30.9dcbf795.js"><link rel="prefetch" href="/blogs/assets/js/31.5cb42074.js"><link rel="prefetch" href="/blogs/assets/js/32.50594513.js"><link rel="prefetch" href="/blogs/assets/js/33.57c36707.js"><link rel="prefetch" href="/blogs/assets/js/34.cb4a6541.js"><link rel="prefetch" href="/blogs/assets/js/35.858c4178.js"><link rel="prefetch" href="/blogs/assets/js/36.c7ecfe19.js"><link rel="prefetch" href="/blogs/assets/js/37.7dc7c5dc.js"><link rel="prefetch" href="/blogs/assets/js/38.42d67ba9.js"><link rel="prefetch" href="/blogs/assets/js/39.8aa32f79.js"><link rel="prefetch" href="/blogs/assets/js/4.cf8160ec.js"><link rel="prefetch" href="/blogs/assets/js/40.fe33337a.js"><link rel="prefetch" href="/blogs/assets/js/42.517353fc.js"><link rel="prefetch" href="/blogs/assets/js/43.8807d1d4.js"><link rel="prefetch" href="/blogs/assets/js/44.fb25920f.js"><link rel="prefetch" href="/blogs/assets/js/45.d037338b.js"><link rel="prefetch" href="/blogs/assets/js/46.eb86e65f.js"><link rel="prefetch" href="/blogs/assets/js/47.5a577087.js"><link rel="prefetch" href="/blogs/assets/js/48.b628525d.js"><link rel="prefetch" href="/blogs/assets/js/49.9baaefd1.js"><link rel="prefetch" href="/blogs/assets/js/5.7ee670a4.js"><link rel="prefetch" href="/blogs/assets/js/6.4361c4be.js"><link rel="prefetch" href="/blogs/assets/js/8.0d05066c.js"><link rel="prefetch" href="/blogs/assets/js/9.9ac6e2ac.js"><link rel="prefetch" href="/blogs/assets/js/vendors~docsearch.1db7383c.js">
+    <link rel="stylesheet" href="/blogs/assets/css/0.styles.1189137d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>Jack Zheng的博客</h3> <p class="description" data-v-59e6cb88>资深码农，专注平台工具开发</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>Jack Zheng</span>
+          
+        <!---->
+        2024
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blogs/" class="home-link router-link-active"><img src="/blogs/avatar.png" alt="Jack Zheng的博客" class="logo"> <span class="site-name">Jack Zheng的博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blogs/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/categories/数据库/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/操作系统/" class="nav-link"><i class="undefined"></i>
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/容器化/" class="nav-link"><i class="undefined"></i>
+  容器化
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/运维/" class="nav-link"><i class="undefined"></i>
+  运维
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/编程/" class="nav-link"><i class="undefined"></i>
+  编程
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/面试/" class="nav-link"><i class="undefined"></i>
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/工具/" class="nav-link"><i class="undefined"></i>
+  工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      我的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://zhengxiaojun.github.io/home/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="/blogs/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><img src="/blogs/avatar.png" alt="author-avatar" class="personal-img" data-v-1fad0c41> <h3 class="name" data-v-1fad0c41>
+    Jack Zheng
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>11</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>24</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/blogs/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/categories/数据库/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/操作系统/" class="nav-link"><i class="undefined"></i>
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/容器化/" class="nav-link"><i class="undefined"></i>
+  容器化
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/运维/" class="nav-link"><i class="undefined"></i>
+  运维
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/编程/" class="nav-link"><i class="undefined"></i>
+  编程
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/面试/" class="nav-link"><i class="undefined"></i>
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/工具/" class="nav-link"><i class="undefined"></i>
+  工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      我的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://zhengxiaojun.github.io/home/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="/blogs/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>Docker 部署服务🔥</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>Jack Zheng</span>
+          
+        <!---->
+        2024
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page" style="padding-right:0;"><section style="display:;"><div class="page-title"><h1 class="title">Docker 部署服务🔥</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>Jack Zheng</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>2023/9/26</span></i> <!----> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>docker</span><span class="tag-item" data-v-8a445198>container</span></i></div></div> <div class="theme-reco-content content__default"><div class="custom-block tip"><p class="title"></p><p>Centos7部署docker</p></div><div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">cat</span> /etc/issue
+
+<span class="token function">uname</span> <span class="token parameter variable">-r</span>
+
+<span class="token function">cat</span> /proc/version
+
+<span class="token function">cat</span> /etc/redhat-release
+
+yum <span class="token function">install</span> <span class="token parameter variable">-y</span> yum-utils   device-mapper-persistent-data   lvm2
+
+yum-config-manager     --add-repo     https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos/docker-ce.repo
+
+<span class="token function">cat</span> /etc/yum.repos.d/docker-ce.repo
+
+yum <span class="token function">install</span> docker-ce docker-ce-cli containerd.io
+
+yum list docker-ce <span class="token parameter variable">--showduplicates</span> <span class="token operator">|</span> <span class="token function">sort</span> <span class="token parameter variable">-r</span>
+
+<span class="token function">docker</span> <span class="token parameter variable">--version</span>
+
+systemctl start <span class="token function">docker</span>
+
+<span class="token function">docker</span> info
+
+<span class="token function">curl</span> <span class="token parameter variable">-L</span> <span class="token string">&quot;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-<span class="token variable"><span class="token variable">$(</span><span class="token function">uname</span> <span class="token parameter variable">-s</span><span class="token variable">)</span></span>-<span class="token variable"><span class="token variable">$(</span><span class="token function">uname</span> <span class="token parameter variable">-m</span><span class="token variable">)</span></span>&quot;</span> <span class="token parameter variable">-o</span> /usr/local/bin/docker-compose
+
+<span class="token function">chmod</span> +x /usr/local/bin/docker-compose
+
+<span class="token function">ln</span> <span class="token parameter variable">-s</span> /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+
+<span class="token function">service</span> <span class="token function">docker</span> start 
+
+<span class="token function">service</span> <span class="token function">docker</span> restart 
+
+<span class="token function">service</span> <span class="token function">docker</span> stop
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div><div class="custom-block tip"><p class="title"></p><p>Ubuntu部署docker</p></div><div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">apt</span> update
+
+<span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg <span class="token operator">|</span> <span class="token function">sudo</span> apt-key <span class="token function">add</span> -
+
+add-apt-repository <span class="token string">&quot;deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu <span class="token variable"><span class="token variable">$(</span>lsb_release <span class="token parameter variable">-cs</span><span class="token variable">)</span></span> stable&quot;</span>
+
+<span class="token function">apt-get</span> <span class="token function">install</span> docker-ce docker-ce-cli containerd.io
+
+<span class="token function">usermod</span> <span class="token parameter variable">-aG</span> <span class="token function">docker</span> <span class="token environment constant">$USER</span>
+
+systemctl start <span class="token function">docker</span>
+
+<span class="token function">apt-get</span> <span class="token parameter variable">-y</span> <span class="token function">install</span> apt-transport-https ca-certificates <span class="token function">curl</span> software-properties-common
+
+<span class="token function">service</span> <span class="token function">docker</span> restart
+
+<span class="token function">service</span> <span class="token function">docker</span> status
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><div class="custom-block tip"><p class="title"></p><p>更新容器时间</p></div><div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">docker</span> <span class="token function">cp</span> /etc/localtime 容器名称:/etc
+
+<span class="token function">docker</span> <span class="token function">cp</span> /usr/share/zoneinfo/Asia/Shanghai 容器名称:/etc/localtime
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><div class="custom-block tip"><p class="title"></p><p>docker 常用命令</p></div><div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 查看镜像</span>
+<span class="token function">docker</span> images
+
+<span class="token comment"># 使用dockerfile构建镜像</span>
+<span class="token function">docker</span> build <span class="token parameter variable">-t</span> 镜像名称 <span class="token parameter variable">-f</span> ./Dockerfile --no-cache <span class="token builtin class-name">.</span>
+
+<span class="token comment"># 运行容器</span>
+<span class="token function">docker</span> run <span class="token parameter variable">-itd</span> <span class="token parameter variable">--name</span> 容器名称 镜像名称
+
+<span class="token comment"># 查看容器</span>
+<span class="token function">docker</span> <span class="token function">ps</span> <span class="token parameter variable">-a</span>
+
+<span class="token comment"># 搜索镜像</span>
+<span class="token function">docker</span> search nginx
+
+<span class="token comment"># 拉取镜像</span>
+<span class="token function">docker</span> pull nginx
+
+<span class="token comment"># 导出镜像</span>
+<span class="token function">docker</span> <span class="token builtin class-name">export</span> b11b952e3d1ed9737a58cd0df78d08defb3e5f962fbd44c36fcecdb1a5886f4d <span class="token operator">&gt;</span> image.tar
+
+<span class="token comment"># 导入镜像</span>
+<span class="token function">cat</span> image.tar <span class="token operator">|</span> <span class="token function">docker</span> <span class="token function">import</span> - 镜像名称
+
+<span class="token comment"># 查看容器执行命令</span>
+<span class="token function">docker</span> <span class="token function">ps</span> <span class="token parameter variable">-a</span> --no-trunc
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><div class="custom-block tip"><p class="title"></p><p>部署mobsf</p></div><div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">docker</span> pull opensecurity/mobile-security-framework-mobsf
+
+<span class="token function">docker</span> run <span class="token parameter variable">-itd</span> <span class="token parameter variable">-p</span> <span class="token number">8001</span>:8000 <span class="token parameter variable">--name</span> mobsf_test opensecurity/mobile-security-framework-mobsf:latest
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><div class="custom-block tip"><p class="title"></p><p>部署portainer</p></div><div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">docker</span> run <span class="token parameter variable">-d</span> <span class="token parameter variable">-p</span> <span class="token number">9000</span>:9000 <span class="token parameter variable">--name</span> portainer <span class="token parameter variable">--restart</span> always portainer/portainer <span class="token parameter variable">-H</span> tcp://xx.xx.xx.xx:2375
+
+<span class="token function">docker</span> run <span class="token parameter variable">-d</span> <span class="token parameter variable">-p</span> <span class="token number">9000</span>:9000 <span class="token parameter variable">--name</span> portainer <span class="token parameter variable">--restart</span> always portainer/portainer
+
+<span class="token function">docker</span> run <span class="token parameter variable">-d</span> <span class="token parameter variable">-p</span> <span class="token number">9000</span>:9000 <span class="token parameter variable">-v</span> /var/run/docker.sock:/var/run/docker.sock portainer/portainer
+
+netsh interface portproxy <span class="token function">add</span> v4tov4 <span class="token assign-left variable">listenport</span><span class="token operator">=</span><span class="token number">2375</span> <span class="token assign-left variable">connectaddress</span><span class="token operator">=</span><span class="token number">127.0</span>.0.1 <span class="token assign-left variable">connectport</span><span class="token operator">=</span><span class="token number">2375</span> <span class="token assign-left variable">listenaddress</span><span class="token operator">=</span>xx.xx.xx.xx <span class="token assign-left variable">protocol</span><span class="token operator">=</span>tcp
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><div class="custom-block tip"><p class="title"></p><p>部署Yapi</p></div><div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">docker</span> pull registry.cn-hangzhou.aliyuncs.com/anoy/yapi
+
+<span class="token function">mkdir</span> <span class="token parameter variable">-p</span> /data/yapi/mongodata
+
+<span class="token function">docker</span> run <span class="token parameter variable">--restart</span> always <span class="token parameter variable">-v</span> /data/yapi/mongodata:/data/db <span class="token parameter variable">-d</span> <span class="token parameter variable">--name</span> yapimongo mongo
+
+<span class="token function">docker</span> run <span class="token parameter variable">-it</span> <span class="token parameter variable">--rm</span> <span class="token parameter variable">--link</span> yapimongo:mongo <span class="token parameter variable">--entrypoint</span> <span class="token function">npm</span> <span class="token parameter variable">--workdir</span> /api/vendors registry.cn-hangzhou.aliyuncs.com/anoy/yapi run install-server
+<span class="token comment">## 初始化管理员账号成功,账号名：&quot;admin@admin.com&quot;，密码：&quot;ymfe.org&quot; </span>
+
+<span class="token function">docker</span> run <span class="token parameter variable">-d</span> <span class="token parameter variable">--restart</span><span class="token operator">=</span>always <span class="token parameter variable">--name</span> yapi <span class="token parameter variable">--link</span> yapimongo:mongo <span class="token parameter variable">--workdir</span> /api/vendors <span class="token parameter variable">-p</span> <span class="token number">3001</span>:3000 registry.cn-hangzhou.aliyuncs.com/anoy/yapi server/app.js 
+
+<span class="token comment">#### 禁用注册</span>
+<span class="token function">docker</span> <span class="token builtin class-name">exec</span>  <span class="token parameter variable">-it</span> yapi /bin/sh
+
+<span class="token function">vi</span> <span class="token punctuation">..</span>/config.json 
+
+<span class="token comment">#修改内容如下</span>
+<span class="token punctuation">{</span>
+  <span class="token string">&quot;port&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;3000&quot;</span>,
+  <span class="token string">&quot;adminAccount&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;admin@admin.com&quot;</span>,
+  <span class="token string">&quot;closeRegister&quot;</span>:true, <span class="token comment">#主要是添加这句配置</span>
+  <span class="token string">&quot;db&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;servername&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;mongo&quot;</span>,
+    <span class="token string">&quot;DATABASE&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;yapi&quot;</span>,
+    <span class="token string">&quot;port&quot;</span><span class="token builtin class-name">:</span> <span class="token number">27017</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">#保存后退出</span>
+
+<span class="token builtin class-name">exit</span> <span class="token comment">#退出容器</span>
+
+<span class="token function">docker</span> restart yapi <span class="token comment">#重启服务</span>
+
+<span class="token comment">###禁用注册后怎么添加用户呢，登录yapi，然后添加一个项目，增加一个注册用户接口</span>
+
+地址为：http://yapi:端口/api/user/reg
+
+POST json
+
+<span class="token punctuation">{</span>
+  <span class="token string">&quot;email&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;xx@xxx.com&quot;</span>,
+  <span class="token string">&quot;password&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;xxx@xxx.com&quot;</span>,
+  <span class="token string">&quot;username&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;xxxx&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br></div></div><div class="custom-block tip"><p class="title"></p><p>部署MySQL8.0 并修改认证加密方式</p></div><div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">docker</span> pull mysql:8.0
+
+<span class="token function">docker</span> run <span class="token parameter variable">--name</span> mysql8.0 <span class="token parameter variable">-p</span> <span class="token number">3309</span>:3306 <span class="token parameter variable">-d</span> mysql:8.0
+
+ALTER <span class="token environment constant">USER</span> <span class="token string">'root'</span>@<span class="token string">'localhost'</span> IDENTIFIED BY <span class="token string">'1q2w3e4r'</span><span class="token punctuation">;</span>
+
+FLUSH PRIVILEGES<span class="token punctuation">;</span>
+
+CREATE <span class="token environment constant">USER</span> <span class="token string">'test'</span>@<span class="token string">'%'</span> IDENTIFIED BY <span class="token string">'test123'</span><span class="token punctuation">;</span>
+
+GRANT ALL PRIVILEGES ON *.* TO <span class="token string">'test'</span>@<span class="token string">'%'</span><span class="token punctuation">;</span>
+
+SELECT user, authentication_string, plugin FROM mysql.user WHERE user <span class="token operator">=</span> <span class="token string">'test'</span><span class="token punctuation">;</span>
+
+ALTER <span class="token environment constant">USER</span> <span class="token string">'test'</span>@<span class="token string">'%'</span> IDENTIFIED WITH mysql_native_password BY <span class="token string">'test123'</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><div class="custom-block tip"><p class="title"></p><p>部署xxl-job-admin</p></div><div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">docker</span> pull xuxueli/xxl-job-admin:2.3.1
+
+<span class="token function">docker</span> run <span class="token parameter variable">-e</span> <span class="token assign-left variable">PARAMS</span><span class="token operator">=</span><span class="token string">&quot;--spring.datasource.url=jdbc:mysql://xx.xx.xx.xx:3306/xxl_job?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;serverTimezone=Asia/Shanghai --spring.datasource.username=root --spring.datasource.password=123456&quot;</span> <span class="token parameter variable">-p</span> <span class="token number">8080</span>:8080 <span class="token parameter variable">--name</span> xxl-job-admin <span class="token parameter variable">-d</span> xuxueli/xxl-job-admin:2.3.1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><div class="custom-block tip"><p class="title"></p><p>部署zookeeper</p></div><div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">docker</span> run <span class="token parameter variable">--name</span> my-zookeeper <span class="token parameter variable">--env</span><span class="token operator">=</span><span class="token environment constant">PATH</span><span class="token operator">=</span>/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.7.0-bin/bin <span class="token parameter variable">--env</span><span class="token operator">=</span>JAVA_HOME<span class="token operator">=</span>/usr/local/openjdk-11 <span class="token parameter variable">--env</span><span class="token operator">=</span><span class="token environment constant">LANG</span><span class="token operator">=</span>C.UTF-8 <span class="token parameter variable">--env</span><span class="token operator">=</span>JAVA_VERSION<span class="token operator">=</span><span class="token number">11.0</span>.13 <span class="token parameter variable">--env</span><span class="token operator">=</span>ZOO_CONF_DIR<span class="token operator">=</span>/conf <span class="token parameter variable">--env</span><span class="token operator">=</span>ZOO_DATA_DIR<span class="token operator">=</span>/data <span class="token parameter variable">--env</span><span class="token operator">=</span>ZOO_DATA_LOG_DIR<span class="token operator">=</span>/datalog <span class="token parameter variable">--env</span><span class="token operator">=</span>ZOO_LOG_DIR<span class="token operator">=</span>/logs <span class="token parameter variable">--env</span><span class="token operator">=</span>ZOO_TICK_TIME<span class="token operator">=</span><span class="token number">2000</span> <span class="token parameter variable">--env</span><span class="token operator">=</span>ZOO_INIT_LIMIT<span class="token operator">=</span><span class="token number">5</span> <span class="token parameter variable">--env</span><span class="token operator">=</span>ZOO_SYNC_LIMIT<span class="token operator">=</span><span class="token number">2</span> <span class="token parameter variable">--env</span><span class="token operator">=</span>ZOO_AUTOPURGE_PURGEINTERVAL<span class="token operator">=</span><span class="token number">0</span> <span class="token parameter variable">--env</span><span class="token operator">=</span>ZOO_AUTOPURGE_SNAPRETAINCOUNT<span class="token operator">=</span><span class="token number">3</span> <span class="token parameter variable">--env</span><span class="token operator">=</span>ZOO_MAX_CLIENT_CNXNS<span class="token operator">=</span><span class="token number">60</span> <span class="token parameter variable">--env</span><span class="token operator">=</span>ZOO_STANDALONE_ENABLED<span class="token operator">=</span>true <span class="token parameter variable">--env</span><span class="token operator">=</span>ZOO_ADMINSERVER_ENABLED<span class="token operator">=</span>true <span class="token parameter variable">--env</span><span class="token operator">=</span>ZOOCFGDIR<span class="token operator">=</span>/conf <span class="token parameter variable">--volume</span><span class="token operator">=</span>/data <span class="token parameter variable">--volume</span><span class="token operator">=</span>/datalog <span class="token parameter variable">--volume</span><span class="token operator">=</span>/logs <span class="token parameter variable">--privileged</span> <span class="token parameter variable">--workdir</span><span class="token operator">=</span>/apache-zookeeper-3.7.0-bin <span class="token parameter variable">-p</span> <span class="token number">2181</span>:2181 <span class="token parameter variable">--restart</span><span class="token operator">=</span>no <span class="token parameter variable">--runtime</span><span class="token operator">=</span>runc <span class="token parameter variable">-d</span> zookeeper-3.7.0 /docker-entrypoint.sh zkServer.sh start-foreground
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="custom-block tip"><p class="title"></p><p>部署mongodb集群</p></div><div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># docker run -d -p 27017:27017 --name cmdb-mongodb -e MONGO_INITDB_ROOT_USERNAME=cmdb_mogo -e MONGO_INITDB_ROOT_PASSWORD=cmdb_mogo mongo --replSet rs0</span>
+
+<span class="token function">docker</span> run <span class="token parameter variable">-d</span> <span class="token parameter variable">-p</span> <span class="token number">27017</span>:27017 <span class="token parameter variable">--name</span> cmdb-mongodb mongo <span class="token parameter variable">--replSet</span> rs0
+
+<span class="token function">docker</span> run <span class="token parameter variable">-d</span> <span class="token parameter variable">-p</span> <span class="token number">27018</span>:27017 <span class="token parameter variable">--name</span> cmdb-mongodb2 mongo <span class="token parameter variable">--replSet</span> rs0
+
+config <span class="token operator">=</span> <span class="token punctuation">{</span> _id <span class="token builtin class-name">:</span> <span class="token string">&quot;rs0&quot;</span>, members <span class="token builtin class-name">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>_id <span class="token builtin class-name">:</span> <span class="token number">0</span>, <span class="token function">host</span> <span class="token builtin class-name">:</span> <span class="token string">&quot;172.17.0.16:27017&quot;</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+
+rs.initiate<span class="token punctuation">(</span>config<span class="token punctuation">)</span>
+
+rs.status<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+rs.add<span class="token punctuation">(</span><span class="token string">&quot;172.17.0.18:27017&quot;</span><span class="token punctuation">)</span>
+
+use cmdb
+db.createUser<span class="token punctuation">(</span><span class="token punctuation">{</span>user: <span class="token string">&quot;cmdb_mogo&quot;</span>,pwd: <span class="token string">&quot;cmdb_mogo&quot;</span>,roles: <span class="token punctuation">[</span> <span class="token punctuation">{</span> role: <span class="token string">&quot;readWrite&quot;</span>, db: <span class="token string">&quot;cmdb&quot;</span> <span class="token punctuation">}</span>,<span class="token punctuation">{</span> role: <span class="token string">&quot;readWrite&quot;</span>, db: <span class="token string">&quot;monstache&quot;</span> <span class="token punctuation">}</span> <span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:0;" data-v-b57cc07c data-v-7dd95ae2></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><div class="reco-bgm-panel" data-v-b1d3339e><audio id="bgm" src="https://lr-sycdn.kuwo.cn/dd0ce1ed64487179b7bb22d9c1784f2e/652384d9/resource/n1/10/34/3125048604.mp3" data-v-b1d3339e></audio> <div class="reco-float-box" style="bottom:20px;z-index:999999;display:none;" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><img src="https://img1.kuwo.cn/star/albumcover/500/63/75/4132398938.jpg" data-v-b1d3339e></div> <div class="reco-bgm-box" style="left:10px;bottom:10px;z-index:999999;" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><div class="reco-bgm-cover" style="background-image:url(https://img1.kuwo.cn/star/albumcover/500/63/75/4132398938.jpg);" data-v-b1d3339e><div class="mini-operation" style="display:none;" data-v-b1d3339e><i class="reco-bgm reco-bgm-pause" style="display:none;" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-play" style="display:none;" data-v-b1d3339e></i></div> <div class="falut-message" style="display:none;" data-v-b1d3339e>
+          播放失败
+        </div></div> <div class="reco-bgm-info" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><div class="info-box" data-v-b1d3339e><i class="reco-bgm reco-bgm-music music" data-v-b1d3339e></i>孤注一掷</div> <div class="info-box" data-v-b1d3339e><i class="reco-bgm reco-bgm-artist" data-v-b1d3339e></i>孤注一掷</div> <div class="reco-bgm-progress" data-v-b1d3339e><div class="progress-bar" data-v-b1d3339e><div class="bar" data-v-b1d3339e></div></div></div> <div class="reco-bgm-operation" data-v-b1d3339e><i class="reco-bgm reco-bgm-last last" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-pause pause" style="display:none;" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-play play" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-next next" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-volume1 volume" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-mute mute" style="display:none;" data-v-b1d3339e></i> <div class="volume-bar" data-v-b1d3339e><div class="bar" data-v-b1d3339e></div></div></div></div> <div class="reco-bgm-left-box" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><i class="reco-bgm reco-bgm-left" data-v-b1d3339e></i></div></div></div></div></div>
+    <script src="/blogs/assets/js/app.a87bd0ee.js" defer></script><script src="/blogs/assets/js/7.ebdb849f.js" defer></script><script src="/blogs/assets/js/2.cd33bdb9.js" defer></script><script src="/blogs/assets/js/1.5c5de54b.js" defer></script><script src="/blogs/assets/js/41.99902ed7.js" defer></script>
+  </body>
+</html>
